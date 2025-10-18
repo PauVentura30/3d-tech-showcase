@@ -1,70 +1,198 @@
-# Getting Started with Create React App
+# 🎮 3D Tech Showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Interactive 3D product showcase featuring gaming peripherals with smooth interactions and premium Apple-inspired design.
 
-## Available Scripts
+![3D Tech Showcase](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎯 **Interactive 3D Models** - Real gaming peripherals with smooth rotation
+- 🎨 **Dynamic Color Picker** - Change product colors in real-time
+- 🖱️ **Intuitive Controls** - Drag to rotate, scroll to zoom
+- 📱 **Fully Responsive** - Perfect on desktop, tablet, and mobile
+- ⚡ **Optimized Performance** - Fast loading with model preloading
+- 🎭 **Premium UI** - Apple/Nike inspired minimalist design
+- 🌟 **Smooth Animations** - Framer Motion powered transitions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Frontend**
+- React.js 18
+- Three.js (r128)
+- React Three Fiber
+- React Three Drei
+- Framer Motion
 
-### `npm run build`
+**Styling**
+- CSS Grid & Flexbox
+- CSS Custom Properties
+- Responsive Design
+- Glassmorphism Effects
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Performance**
+- Model Preloading
+- Lazy Loading with Suspense
+- Optimized 3D Rendering
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Quick Start
 
-### `npm run eject`
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/PauVentura30/3d-tech-showcase.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Navigate to project directory
+cd 3d-tech-showcase
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Install dependencies
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Start development server
+npm start
+```
 
-## Learn More
+The app will open at `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📦 Project Structure
+```
+3d-tech-showcase/
+├── public/
+│   └── models/          # 3D model files (.glb)
+│       ├── headset.glb
+│       ├── keyboard.glb
+│       ├── mouse.glb
+│       └── watch.glb
+├── src/
+│   ├── components/
+│   │   ├── Scene.jsx           # Main 3D scene
+│   │   ├── Product3D.jsx       # 3D product component
+│   │   ├── ProductInfo.jsx     # Product sidebar
+│   │   └── ProductGrid.jsx     # Product thumbnails
+│   ├── data/
+│   │   └── products.js         # Product data
+│   ├── App.js
+│   └── index.js
+└── package.json
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Products
 
-### Analyzing the Bundle Size
+| Product | Features | Colors |
+|---------|----------|--------|
+| 🎧 **Gaming Headset Pro** | Wireless 2.4GHz, 7.1 Surround, RGB | Black, Red, Blue, Green |
+| ⌨️ **Mechanical Keyboard RGB** | Hot-swappable, Per-key RGB, Aluminum | White, Black, Purple |
+| 🖱️ **Gaming Mouse X** | 20K DPI, 69g, RGB Lighting | White, Black, Pink |
+| ⌚ **Smart Watch Pro** | AMOLED, GPS, Heart Rate Monitor | Silver, Black, Gold |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🎯 Key Features Breakdown
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Interactive 3D Models
+- Real-time rendering with Three.js
+- Smooth auto-rotation
+- Mouse drag to manually rotate
+- Scroll to zoom in/out
 
-### Advanced Configuration
+### Color System
+- Dynamic material color application
+- Preserves original textures
+- Multiplicative color blending
+- Instant visual feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Responsive Design
+- CSS Grid for layout
+- Adaptive sidebar
+- Mobile-optimized controls
+- Touch gesture support
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🚀 Performance Optimizations
 
-### `npm run build` fails to minify
+- ✅ Model preloading for instant switches
+- ✅ Memoized 3D scenes to prevent re-renders
+- ✅ Efficient material cloning
+- ✅ Lazy loading with React Suspense
+- ✅ Optimized lighting setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📱 Browser Support
+
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Edge 90+
+
+---
+
+## 🎓 What I Learned
+
+- Advanced Three.js concepts (lighting, shadows, materials)
+- React Three Fiber ecosystem
+- 3D model optimization for web
+- Performance tuning for 3D web apps
+- CSS Grid for complex layouts
+- Dynamic color manipulation in 3D space
+
+---
+
+## 🔮 Future Enhancements
+
+- [ ] Add product animations on selection
+- [ ] Implement AR view for mobile
+- [ ] Add multiple camera angles
+- [ ] Product comparison feature
+- [ ] Shopping cart integration
+- [ ] Export product configurations
+
+---
+
+## 👨‍💻 Author
+
+**Pau Ventura**
+
+- Portfolio: [pauventura.com](https://portfolio-pau-ventura.netlify.app)
+- GitHub: [@PauVentura30](https://github.com/PauVentura30)
+- LinkedIn: [Pau Ventura](https://www.linkedin.com/in/pau-ventura-612450250/)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- 3D Models from [Sketchfab](https://sketchfab.com/)
+- Inspiration from Apple and Nike product pages
+- Three.js community for amazing documentation
+
+---
+
+<div align="center">
+
+**⭐ If you like this project, give it a star!**
+
+Made with ❤️ and Three.js
+
+</div>
