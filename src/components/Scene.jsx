@@ -23,13 +23,9 @@ const Scene = ({ product, selectedColor }) => {
         padding: 0
       }}
     >
-      {/* Cámara con posición estilo Apple */}
-      <PerspectiveCamera makeDefault position={[0, 1, 8]} fov={50} />
+      <PerspectiveCamera makeDefault position={[0, 2, 8]} fov={50} />
 
-      {/* Iluminación premium (estilo Apple/Nike) */}
       <ambientLight intensity={0.4} />
-      
-      {/* Luz principal (key light) */}
       <directionalLight 
         position={[10, 10, 5]} 
         intensity={1.5}
@@ -37,22 +33,16 @@ const Scene = ({ product, selectedColor }) => {
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
       />
-      
-      {/* Luz de relleno (fill light) */}
       <directionalLight 
         position={[-10, 5, -5]} 
         intensity={0.5}
         color="#667eea"
       />
-      
-      {/* Luz trasera (rim light) para efecto heroico */}
       <directionalLight 
         position={[0, 5, -10]} 
         intensity={0.8}
         color="#764ba2"
       />
-
-      {/* Spot light para highlights */}
       <spotLight
         position={[5, 10, 5]}
         angle={0.3}
@@ -61,7 +51,6 @@ const Scene = ({ product, selectedColor }) => {
         castShadow
       />
 
-      {/* Controles de órbita (estilo Nike - drag to rotate) */}
       <OrbitControls
         ref={controlsRef}
         enablePan={false}
@@ -75,10 +64,8 @@ const Scene = ({ product, selectedColor }) => {
         enableDamping={true}
       />
 
-      {/* Environment map para reflejos realistas */}
       <Environment preset="city" />
 
-      {/* Producto 3D con loading fallback */}
       <Suspense fallback={
         <mesh>
           <boxGeometry args={[1, 1, 1]} />
@@ -93,7 +80,6 @@ const Scene = ({ product, selectedColor }) => {
         />
       </Suspense>
 
-      {/* Sombras de contacto (estilo Apple - muy sutil) */}
       <ContactShadows
         position={[0, -2, 0]}
         opacity={0.4}
@@ -102,7 +88,6 @@ const Scene = ({ product, selectedColor }) => {
         far={4}
       />
 
-      {/* Suelo invisible para recibir sombras */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]} receiveShadow>
         <planeGeometry args={[100, 100]} />
         <shadowMaterial transparent opacity={0.2} />

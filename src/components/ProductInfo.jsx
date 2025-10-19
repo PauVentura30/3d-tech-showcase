@@ -6,19 +6,11 @@ const ProductInfo = ({ product, selectedColor, onColorChange }) => {
 
   return (
     <div className="product-info">
-      {/* Categoría */}
       <div className="product-category">{product.category}</div>
-      
-      {/* Nombre */}
       <h2 className="product-name">{product.name}</h2>
-      
-      {/* Precio */}
       <div className="product-price">${product.price}</div>
-      
-      {/* Descripción */}
       <p className="product-description">{product.description}</p>
       
-      {/* Selector de colores */}
       <div className="color-selector">
         <h4>Colors</h4>
         <div className="color-options">
@@ -40,7 +32,6 @@ const ProductInfo = ({ product, selectedColor, onColorChange }) => {
         </div>
       </div>
       
-      {/* Especificaciones */}
       <div className="product-specs">
         <h4>Specifications</h4>
         <ul>
@@ -50,10 +41,7 @@ const ProductInfo = ({ product, selectedColor, onColorChange }) => {
         </ul>
       </div>
       
-      {/* Botón CTA */}
-      <button className="cta-button">
-        Add to Cart
-      </button>
+      <button className="cta-button">Add to Cart</button>
     </div>
   );
 };

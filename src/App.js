@@ -11,33 +11,28 @@ function App() {
   const [selectedColor, setSelectedColor] = useState('#1a1a1a');
   const [isLoading, setIsLoading] = useState(true);
 
-  // Inicializar con el primer producto
   useEffect(() => {
     if (products.length > 0) {
       setSelectedProduct(products[0]);
       setSelectedColor(products[0].colors[0].hex);
       
-      // Simular carga inicial
       setTimeout(() => {
         setIsLoading(false);
       }, 2000);
     }
   }, []);
 
-  // Cambiar producto
   const handleSelectProduct = (product) => {
     setSelectedProduct(product);
-    setSelectedColor(product.colors[0].hex); // Resetear al primer color
+    setSelectedColor(product.colors[0].hex);
   };
 
-  // Cambiar color
   const handleColorChange = (colorHex) => {
     setSelectedColor(colorHex);
   };
 
   return (
     <div className="App">
-      {/* Loading Screen */}
       <AnimatePresence>
         {isLoading && (
           <motion.div 
@@ -52,7 +47,6 @@ function App() {
         )}
       </AnimatePresence>
 
-      {/* Header */}
       <header className="header">
         <h1>3D TECH SHOWCASE</h1>
         <div className="header-nav">
@@ -60,9 +54,7 @@ function App() {
         </div>
       </header>
 
-      {/* Main Container */}
       <div className="main-container">
-        {/* Canvas 3D */}
         <div className="canvas-container">
           {selectedProduct && (
             <Scene 
@@ -72,7 +64,6 @@ function App() {
           )}
         </div>
 
-        {/* Sidebar Info */}
         <div className="product-info-sidebar">
           <ProductInfo 
             product={selectedProduct}
@@ -82,7 +73,6 @@ function App() {
         </div>
       </div>
 
-      {/* Product Grid */}
       <div className="product-grid-container">
         <ProductGrid 
           products={products}

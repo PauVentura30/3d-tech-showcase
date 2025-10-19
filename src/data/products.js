@@ -1,5 +1,4 @@
 // Base de datos de productos con configuración 3D individual
-
 export const products = [
   {
     id: 1,
